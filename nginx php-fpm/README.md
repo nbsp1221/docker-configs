@@ -1,6 +1,11 @@
 # Nginx and PHP-FPM
 
-This is `docker-compose.yml` that can run Nginx latest version and PHP-FPM 7.4 version.
+This is `docker-compose.yml` that can run Nginx and PHP-FPM.
+
+### Version
+
+* Nginx: latest
+* PHP-FPM: 7.4
 
 ## Try it out
 
