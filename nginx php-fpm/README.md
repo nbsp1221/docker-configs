@@ -10,7 +10,7 @@ This is `docker-compose.yml` that can run Nginx and PHP-FPM.
 ## Try it out
 
 ```shell
-$ git clone https://github.com/nbsp1221/docker-settings
+$ git clone https://github.com/nbsp1221/docker-settings.git
 $ cd 'docker-settings/nginx php-fpm'
 $ sudo docker-compose up
 ```
