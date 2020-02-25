@@ -29,8 +29,6 @@ You can easily run these services by using [docker-compose](https://docs.docker.
         └── php.ini-production
 ```
 
-`db-datas` is a directory where the database is stored.
-
 ## Try it out
 
 ```shell
@@ -39,4 +37,7 @@ $ cd 'docker-settings/nginx php-fpm mariadb phpmyadmin'
 $ sudo docker-compose up
 ```
 
-Visit http://localhost:8080 then you can see PHP information.
+Visit these :
+* http://localhost:8080 - PHP Information
+* http://localhost:8080/db-check.php
+* http://localhost:8090 - phpMyAdmin (Username: develop, Password: develop)
