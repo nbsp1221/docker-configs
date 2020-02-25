@@ -6,10 +6,10 @@ You can easily run these services by using [docker-compose](https://docs.docker.
 
 | Name       | Port          | Version |
 |------------|---------------|---------|
-| Nginx      | 8080 (Expose) | 1.17    |
+| Nginx      | 8080 (expose) | 1.17    |
 | PHP-FPM    | 9000          | 7.4     |
 | MariaDB    | 3306          | 10.4    |
-| phpMyAdmin | 8090 (Expose) | 5.0     |
+| phpMyAdmin | 8090 (expose) | 5.0     |
 
 ## Structure
 
@@ -40,4 +40,4 @@ $ sudo docker-compose up
 Visit these :
 * http://localhost:8080 - PHP Information
 * http://localhost:8080/db-check.php
-* http://localhost:8090 - phpMyAdmin (Username: develop, Password: develop)
+* http://localhost:8090 - phpMyAdmin (username: develop, password: develop)
