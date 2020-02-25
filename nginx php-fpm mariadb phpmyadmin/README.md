@@ -21,6 +21,8 @@ You can easily run these services by using [docker-compose](https://docs.docker.
 │   ├── db-check.php
 │   └── index.php
 └── settings
+    ├── mariadb
+    │   └── mariadb.cnf
     ├── nginx
     │   └── default.conf
     └── php-fpm
