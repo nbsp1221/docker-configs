@@ -26,6 +26,7 @@ services:
     networks:
       - default
     volumes:
+      - ./settings/mariadb/mariadb.cnf:/etc/mysql/mariadb.cnf
       - ./db-datas:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
