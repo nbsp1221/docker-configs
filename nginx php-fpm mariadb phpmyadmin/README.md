@@ -29,6 +29,8 @@ You can easily run these services by using [docker-compose](https://docs.docker.
         └── php.ini-production
 ```
 
+`db-datas` is a directory where the database is stored.
+
 ## Try it out
 
 ```shell
