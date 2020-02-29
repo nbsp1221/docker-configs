@@ -34,9 +34,9 @@ You can easily run these services by using [docker-compose](https://docs.docker.
 ## Try it out
 
 ```shell
-$ git clone https://github.com/nbsp1221/docker-settings.git
-$ cd 'docker-settings/nginx php-fpm mariadb phpmyadmin'
-$ sudo docker-compose up
+git clone https://github.com/nbsp1221/docker-settings.git
+cd 'docker-settings/nginx php-fpm mariadb phpmyadmin'
+sudo docker-compose up
 ```
 
 Visit these :
