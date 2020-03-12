@@ -24,7 +24,8 @@ You can easily run these services by using [docker-compose](https://docs.docker.
     ├── mariadb
     │   └── mariadb.cnf
     ├── nginx
-    │   └── default.conf
+    │   ├── default.conf
+    │   └── nginx.conf
     └── php-fpm
         ├── Dockerfile
         ├── php.ini-development
