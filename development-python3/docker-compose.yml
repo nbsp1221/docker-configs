@@ -1,0 +1,8 @@
+version: "3.8"
+services: 
+  development-python3:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./workspaces:/home/docker/workspaces"
