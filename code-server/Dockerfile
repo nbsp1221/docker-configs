@@ -8,10 +8,10 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
     ln -s ${HOME}/.dracula/zsh/dracula.zsh-theme ${HOME}/.oh-my-zsh/themes/dracula.zsh-theme && \
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-COPY --chown=${USER}:${USER} config/code-server/config.yaml ${HOME}/.config/code-server/config.yaml
-COPY --chown=${USER}:${USER} config/visual-studio-code/settings.json ${HOME}/.local/share/code-server/User/settings.json
-COPY --chown=${USER}:${USER} config/zsh/.zshrc ${HOME}/.zshrc
-COPY --chown=${USER}:${USER} config/zsh/dracula.zsh-theme ${HOME}/.dracula/zsh/dracula.zsh-theme
+COPY --chown=${USER}:${USER} configs/code-server/config.yaml ${HOME}/.config/code-server/config.yaml
+COPY --chown=${USER}:${USER} configs/visual-studio-code/settings.json ${HOME}/.local/share/code-server/User/settings.json
+COPY --chown=${USER}:${USER} configs/zsh/.zshrc ${HOME}/.zshrc
+COPY --chown=${USER}:${USER} configs/zsh/dracula.zsh-theme ${HOME}/.dracula/zsh/dracula.zsh-theme
 WORKDIR ${HOME}/workspaces
 
 # Extensions
