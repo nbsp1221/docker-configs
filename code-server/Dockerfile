@@ -1,7 +1,7 @@
 # Dockerfile
 # - https://github.com/cdr/code-server/blob/main/ci/release-image/Dockerfile
 
-FROM codercom/code-server:latest
+FROM codercom/code-server:3.10.2
 ENV HOME="/home/${USER}"
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
     git clone https://github.com/dracula/zsh.git ${HOME}/.dracula/zsh && \
