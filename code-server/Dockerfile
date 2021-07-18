@@ -12,6 +12,11 @@ COPY --chown=${USER}:${USER} configs/code-server/config.yaml ${HOME}/.config/cod
 COPY --chown=${USER}:${USER} configs/visual-studio-code/settings.json ${HOME}/.local/share/code-server/User/settings.json
 COPY --chown=${USER}:${USER} configs/zsh/.zshrc ${HOME}/.zshrc
 COPY --chown=${USER}:${USER} configs/zsh/dracula.zsh-theme ${HOME}/.dracula/zsh/dracula.zsh-theme
+USER root
+WORKDIR /usr/lib/code-server/src/browser/pages
+RUN sed -i 's/<\/head>/<link rel="stylesheet" href="{{CS_STATIC_BASE}}\/src\/browser\/pages\/fonts.css"><\/head>/g' vscode.html
+COPY configs/code-server/fonts.css /usr/lib/code-server/src/browser/pages/fonts.css
+USER coder
 WORKDIR ${HOME}/workspaces
 
 # Extensions
