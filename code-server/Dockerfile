@@ -20,4 +20,10 @@ USER coder
 WORKDIR ${HOME}/workspaces
 
 # Extensions
-RUN code-server --install-extension PKief.material-icon-theme
+RUN code-server --install-extension dbaeumer.vscode-eslint && \
+    code-server --install-extension eamodio.gitlens && \
+    code-server --install-extension humao.rest-client && \
+    code-server --install-extension ms-python.python && \
+    code-server --install-extension ms-vscode.cpptools && \
+    code-server --install-extension PKief.material-icon-theme && \
+    code-server --install-extension streetsidesoftware.code-spell-checker
