@@ -1,7 +1,14 @@
 {
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 20,
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "gitlens.statusBar.enabled": false
 }
