@@ -1,7 +1,7 @@
 # Dockerfile
 # - https://github.com/cdr/code-server/blob/main/ci/release-image/Dockerfile
 
-FROM codercom/code-server:3.10.2
+FROM codercom/code-server:latest
 ENV HOME="/home/${USER}"
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
     git clone https://github.com/dracula/zsh.git ${HOME}/.dracula/zsh && \
@@ -16,6 +16,7 @@ USER root
 WORKDIR /usr/lib/code-server/src/browser/pages
 RUN sed -i 's/<\/head>/<link rel="stylesheet" href="{{CS_STATIC_BASE}}\/src\/browser\/pages\/fonts.css"><\/head>/g' vscode.html
 COPY configs/code-server/fonts.css /usr/lib/code-server/src/browser/pages/fonts.css
+COPY configs/media-convert /usr/lib/code-server/src/browser/media
 USER coder
 WORKDIR ${HOME}/workspaces
 
