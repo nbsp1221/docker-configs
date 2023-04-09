@@ -1,9 +1,10 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
 USER vscode
 ARG HOME=/home/vscode
-ARG WORKSPACES=/home/vscode/workspaces
+ARG WORKSPACES=/workspaces
 RUN sudo mkdir -p $WORKSPACES && \
     sudo chown -R vscode:vscode $WORKSPACES
+WORKDIR /workspaces
 
 # Install GitHub CLI
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
